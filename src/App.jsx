@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { generateMnemonic } from "bip39";
 import './App.css'
+import { SolanaWallet } from './components/SolanaWallet';
+import { EthWallet } from './components/EthWallet';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +19,11 @@ function App() {
           Create Seed Phrase
       </button>
       <input type="text" value={mnemonic}></input>
+
+      <SolanaWallet />
+      <hr />
+
+      <EthWallet />
     </>
   )
 }
